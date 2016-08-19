@@ -3,7 +3,7 @@
 [debug] CLI Version:  3.0.7
 [debug] Platform:     win32
 [debug] Node Version: v4.4.7
-[debug] Time:         Thu Aug 18 2016 16:57:13 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] Time:         Fri Aug 19 2016 12:53:24 GMT-0500 (Hora est. Pacífico, Sudamérica)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...
@@ -17,21 +17,7 @@
 [debug] CLI Version:  3.0.7
 [debug] Platform:     win32
 [debug] Node Version: v4.4.7
-[debug] Time:         Thu Aug 18 2016 17:24:36 GMT-0500 (Hora est. Pacífico, Sudamérica)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[info] Starting Firebase development server...
-[info] 
-[info] Project Directory: C:\Users\RCanchanyaG\Desktop\Catalogo Web - Adm
-[info] Public Directory: public
-[info] 
-[info] Server listening at: http://localhost:5000
-[debug] ----------------------------------------------------------------------
-[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\RCanchanyaG\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] CLI Version:  3.0.7
-[debug] Platform:     win32
-[debug] Node Version: v4.4.7
-[debug] Time:         Fri Aug 19 2016 09:09:50 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] Time:         Fri Aug 19 2016 12:54:33 GMT-0500 (Hora est. Pacífico, Sudamérica)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...

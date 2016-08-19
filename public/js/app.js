@@ -15,6 +15,10 @@ var app = angular.module("app", [
 			templateUrl: 'templates/categorias.html',
 			controller:'userCtrl'
 		})
+		.when('/pageTest/:nombre', {
+			templateUrl: 'templates/admPlantillas/test.html',
+			controller:'plantillaCtrl'
+		})
 		.when('/hoteles', {
 			templateUrl: 'templates/admPlantillas/hoteles.html',
 			controller: 'plantillaCtrl'
