@@ -15,7 +15,7 @@ var app = angular.module("app", [
 			templateUrl: 'templates/categorias.html',
 			controller:'userCtrl'
 		})
-		.when('/pageTest/:nombre', {
+		.when('/pageTest/:id', {
 			templateUrl: 'templates/admPlantillas/test.html',
 			controller:'plantillaCtrl'
 		})

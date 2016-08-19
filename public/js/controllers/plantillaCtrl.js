@@ -11,15 +11,18 @@ app.controller("plantillaCtrl", function ($scope, $location, $routeParams, crudC
 	syncObject.$bindTo($scope, "objData");*/
 
 	var id= '-KPYBasSGniZYx4jF2nF';
-	var refu = firebase.database().ref().child("plantilla");
-	$scope.user= $firebaseArray(refu);
-	
 
-	var ref = firebase.database().ref().child("plantilla");
+	var ref = firebase.database().ref("plantilla");
 	$scope.objHotel = $firebaseArray(ref);
+
+
+
+	//console.log($scope.objHotel);
 	
-	
-	var commentsRef = firebase.database().ref('plantilla');
+	var idObj3=[];
+	idObj3.push($scope.objHotel);
+	//console.log(idObj3[0]);
+	//console.log(idObj3[1]);
 	
 
 	$scope.objHotelS="Vacio";
@@ -27,12 +30,14 @@ app.controller("plantillaCtrl", function ($scope, $location, $routeParams, crudC
 
 	
 
-	var usuarioId = $routeParams.nombre;
+	var usuarioId = $routeParams.id;
 
 	if (usuarioId) {
 		$scope.uElegido=getDetalles(usuarioId);
 		console.log('$scope.uElegido: ');
 		console.log($scope.uElegido);
+		$scope.uuElegido=$scope.uElegido[0];
+		console.log($scope.uuElegido[0]);
 	};
 
 	/*function obtenerUsuario(usuId){
@@ -43,21 +48,37 @@ app.controller("plantillaCtrl", function ($scope, $location, $routeParams, crudC
 		console.log("en la funcion getDetalles, id: "+ id);
 		var detalles = [];
 		var idObj=[];
+		var idObj2=[];
 
-		commentsRef.on('child_added', function(data) {
-		  	idObj.push(data.val());
-		  	console.log(idObj);
-		});
-		for (var i in idObj) {
-			if (idObj[i].nombre == id) {
+		firebase.database().ref('plantilla/' + id).on('value', function(snapshot) {
+		  //console.log(snapshot.val());
+		  idObj.push(snapshot.val());
+		  //console.log(idObj);
+		  //detalles.push(idObj);
+		});	
+		
+		
+		/*ref.on('child_added', function(data) {
+		  	//idObj.push(data.val());
+		  	//console.log(idObj);
+		  	idObj2.push(data.val());
+		  	console.log(idObj2[1]);
+			//
+			//console.log(data.key);
+			//console.log(data.val());
+			//console.log(data.val().author);
+
+		});*/
+		/*for (var i in idObj) {
+			if (idObj[i] == id) {
 				detalles.push(idObj[i]);
 				console.log('son iguales');
 				console.log(detalles);
 			}
-		}
-
-		return detalles;
-		console.log(detalles);
+		}*/
+		console.log(idObj);	
+		return idObj;
+		
 	}
 	/*if (htl) {
 		//$scope.objHotel = htl;
@@ -103,7 +124,7 @@ app.controller("plantillaCtrl", function ($scope, $location, $routeParams, crudC
 	$scope.agregarPlantilla = function () {
 		$scope.objHotel.$add($scope.objPlantilla)
 		//crudControl.agregar($scope.objHotel);
-		console.log('Antes de agregar: '+$scope.objPlantilla);
+		console.log('Antes de agregar: '+$scope.objHotel);
 	}
 
 	$scope.actualizarPlantilla = function (h) {
