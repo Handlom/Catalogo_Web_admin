@@ -1,3 +1,4 @@
+<div class="row" >   
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,42 +31,28 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<a style="" href="#/formPlantilla" class="btn btn-primary pull-right" role="button">Agregar Plantilla</a>
+<a style="" href="#/formPlantilla" class="btn btn-primary pull-right" role="button">Agregar Plantilla, {{saludo}}</a>
+
 
 <br><br>
-<div class="container"> 
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
+
+         
+        <div class="col-sm-6 col-md-4" ng-repeat="h in objHotel">
           <div class="thumbnail">
             <img src="img/website.jpg" alt="...">
             <div class="caption">
-              <h3>Hotel 1</h3>
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+              <h3>{{h.nombre}}</h3>
+              <p>{{h.descripcion}}</p>
               <center>
-              <p><a href="#" class="btn btn-primary" role="button">Eliminar</a> <a href="#" class="btn btn-default" role="button">Editar</a></p>
+              <p>
+                <a ng-click="eliminarPlantilla(h)" href="" class="btn btn-primary" role="button">Eliminar</a> 
+                <button ng-click="seleccionarData(h)" class="btn btn-default" role="button">Editar</button>
+              </p>
               </center>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="img/website.jpg" alt="...">
-            <div class="caption">
-              <h3>Hotel 2</h3>
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-              <p><a href="#" class="btn btn-primary" role="button">Eliminar</a> <a href="#" class="btn btn-default" role="button">Editar</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="img/website.jpg" alt="...">
-            <div class="caption">
-              <h3>Hotel 3</h3>
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-              <p><a href="#" class="btn btn-primary" role="button">Eliminar</a> <a href="#" class="btn btn-default" role="button">Editar</a></p>
-            </div>
-          </div>
-        </div>
       </div>  
-  </div>
+
+<br><br>
+  

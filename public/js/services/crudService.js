@@ -4,17 +4,12 @@ app.factory('crudControl', function ($location) {
 
 	var authfb = firebase.auth();
 	var db = firebase.database();
-	var plantilla = db.ref("plantilla").on('value',function (snapshot){
-					    return snapshot;
-				  	});
+	var plantilla;
+	
 	
 
 	return{
 		agregar : function(objPlantilla){
-			/*db.ref("Items").set(
-				objPlantilla
-			);*/
-			console.log('registrando plantilla...'+objPlantilla.nombre);
 			db.ref('plantilla/').push(
 					objPlantilla
 		    );
@@ -25,8 +20,8 @@ app.factory('crudControl', function ($location) {
 		eliminar: function(){
 
 		},
-		listar: function(){
-			return plantilla;
+		bd: function(){
+			return db;
 		}
 
 	}

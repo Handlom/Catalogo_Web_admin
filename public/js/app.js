@@ -2,7 +2,8 @@
 
 var app = angular.module("app", [
 	'ngResource',
-	'ngRoute'
+	'ngRoute',
+	'firebase'
 ])
 .config(function ($routeProvider){
 	$routeProvider
@@ -15,7 +16,12 @@ var app = angular.module("app", [
 			controller:'userCtrl'
 		})
 		.when('/hoteles', {
-			templateUrl: 'templates/admPlantillas/hoteles.html'
+			templateUrl: 'templates/admPlantillas/hoteles.html',
+			controller: 'plantillaCtrl'
+		})
+		.when('/formPlantilla', {
+			templateUrl: 'templates/admPlantillas/formPlantilla.html',
+			controller: 'plantillaCtrl'
 		})
 		.when('/restaurantes', {
 			templateUrl: 'templates/admPlantillas/restaurantes.html'
@@ -32,10 +38,7 @@ var app = angular.module("app", [
 		.when('/autos', {
 			templateUrl: 'templates/admPlantillas/autos.html'
 		})
-		.when('/formPlantilla', {
-			templateUrl: 'templates/admPlantillas/formPlantilla.html',
-			controller: 'plantillaCtrl'
-		})
+		
 		.when('/misPlantillas', {
 			templateUrl: 'templates/admUsers/misplantillas.html'
 		})
