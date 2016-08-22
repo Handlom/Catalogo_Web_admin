@@ -27,6 +27,10 @@ var app = angular.module("app", [
 			templateUrl: 'templates/admPlantillas/formPlantilla.html',
 			controller: 'plantillaCtrl'
 		})
+		.when('/formPlantilla/:id', {
+			templateUrl: 'templates/admPlantillas/formPlantilla.html',
+			controller: 'plantillaCtrl'
+		})
 		.when('/restaurantes', {
 			templateUrl: 'templates/admPlantillas/restaurantes.html'
 		})
