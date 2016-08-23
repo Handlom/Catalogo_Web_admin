@@ -1,4 +1,4 @@
-<div class="row" >   
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,19 +31,19 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<a style="" href="#/formPlantilla" class="btn btn-primary pull-right" role="button">Agregar Plantilla, {{saludo}}</a>
-
+<a style="" href="#/formPlantilla" class="btn btn-primary pull-right" role="button">Agregar Plantilla</a>
 
 <br><br>
-         
-  <div class="col-sm-6 col-md-4" ng-repeat="h in objHotel">
+<div class="container">
+<div class="row" >            
+  <div class="col-sm-6 col-md-4" ng-repeat="h in objHotel | filter: { categoria: cateKey }">
     <div class="thumbnail">
       <img src="img/website.jpg" alt="...">
       <div class="caption">
         <center>
-        <input type="" name="" ng-model="h.nombre" />
-        <input type="" name="" ng-model="h.descripcion"/>
-        <button ng-click="objHotel.$save(h)">Guardar</button>
+        <h3>{{h.nombre}}</h3>
+        <p>{{h.descripcion}}</p>
+        <p>{{h.categoria}}</p>
         </center>
         <center>
         <p>
@@ -55,6 +55,6 @@
     </div>
   </div>
 </div>  
-
+</div>
 <br><br>
   

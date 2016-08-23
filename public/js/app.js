@@ -13,13 +13,17 @@ var app = angular.module("app", [
 		})
 		.when('/categorias', {
 			templateUrl: 'templates/categorias.html',
-			controller:'userCtrl'
+			controller:'plantillaCtrl'
+		})
+		.when('/categorias/:id', {
+			templateUrl: 'templates/admPlantillas/hoteles.html',
+			controller:'plantillaCtrl'
 		})
 		.when('/pageTest/:id', {
 			templateUrl: 'templates/admPlantillas/test.html',
 			controller:'plantillaCtrl'
 		})
-		.when('/hoteles', {
+		.when('/cate/:key', {
 			templateUrl: 'templates/admPlantillas/hoteles.html',
 			controller: 'plantillaCtrl'
 		})
@@ -29,6 +33,10 @@ var app = angular.module("app", [
 		})
 		.when('/formPlantilla/:id', {
 			templateUrl: 'templates/admPlantillas/formPlantilla.html',
+			controller: 'plantillaCtrl'
+		})
+		.when('/formCategoria', {
+			templateUrl: 'templates/formCategoria.html',
 			controller: 'plantillaCtrl'
 		})
 		.when('/restaurantes', {

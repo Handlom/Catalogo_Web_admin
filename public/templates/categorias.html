@@ -31,82 +31,22 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/empresa.jpg" alt="...">
-      <div class="caption">                
-        <center>
-        <h3>Hoteles</h3>
-        <p>
-          <a href="#/hoteles" class="btn btn-default" role="button">Ver plantillas</a>
-        </p>
-        </center>
-      </div>
+<a style="" href="#/formCategoria" class="btn btn-primary pull-right" role="button">Agregar Categoria</a>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="categoria in objBDCategoria">
+        <div class="thumbnail">
+          <img src="img/empresa.jpg" alt="...">
+          <div class="caption">                
+            <center>
+            <h3>{{categoria.nombre}}</h3>
+            <p>
+              <a ng-href="#/cate/{{categoria.nombreKey}}" class="btn btn-default" role="button">Ver plantillas</a>
+            </p>
+            </center>
+          </div>
+        </div>
     </div>
+  </div>
 </div>
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/empresa.jpg" alt="...">
-      <div class="caption">                
-        <center>
-        <h3>Restaurantes</h3>
-        <p>
-          <a href="#/restaurantes" class="btn btn-default" role="button">Ver plantillas</a>
-        </p>
-        </center>
-      </div>
-    </div>
-</div>
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/empresa.jpg" alt="...">
-      <div class="caption">                
-        <center>
-        <h3>Clubes</h3>
-        <p>
-          <a href="#/clubes" class="btn btn-default" role="button">Ver plantillas</a>
-        </p>
-        </center>
-      </div>
-    </div>
-</div>
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/empresa.jpg" alt="...">
-      <div class="caption">        
-        <center>
-        <h3>Tiendas por departamento</h3>        
-        <p>
-          <a href="#/tiendasxdep" class="btn btn-default" role="button">Ver plantillas</a>
-        </p>
-        </center>
-      </div>
-    </div>
-</div>
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/empresa.jpg" alt="...">
-      <div class="caption">            
-        <center>
-        <h3>Clinicas</h3>    
-        <p>
-          <a href="#/clinicas" class="btn btn-default" role="button">Ver plantillas</a>
-        </p>
-        </center>
-      </div>
-    </div>
-</div>
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/empresa.jpg" alt="...">
-      <div class="caption">             
-        <center>
-        <h3>Autos</h3>  
-        <p>
-          <a href="#/autos" class="btn btn-default" role="button">Ver plantillas</a>
-        </p>
-        </center>
-      </div>
-    </div>
-</div>
-

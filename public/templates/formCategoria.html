@@ -35,33 +35,26 @@
   <div class="container">
 	  <form>
 	    <div class="form-group">
-	    <label for="exampleInputEmail1">Categoria</label>
-		<select class="form-control" ng-model="objPlantilla.categoria">
-			  <option value="" disabled="" selected="">Seleccionar Categoria</option>
-   			  <option ng-repeat="cat in objBDCategoria" value="{{cat.nombreKey}}">{{cat.nombreKey}}</option>
-			</select>
+	      <label for="exampleInputEmail1">Nombre de la Categoria</label>
+	      <input type="text" ng-model="objCategoria.nombre" class="form-control" placeholder="Categoria 01">
 	    </div>
 	    <div class="form-group">
-	      <label for="exampleInputEmail1">Nombre de la plantilla</label>
-	      <input type="text" ng-model="objPlantilla.nombre" class="form-control" placeholder="Plantilla 01">
+	      <label for="exampleInputPassword1">Descripción de la Categoria</label>
+	      <textarea ng-model="objCategoria.descripcion" class="form-control" ></textarea>
 	    </div>
 	    <div class="form-group">
-	      <label for="exampleInputPassword1">Descripción de la plantilla</label>
-	      <textarea ng-model="objPlantilla.descripcion" class="form-control" ></textarea>
+	      <label for="exampleInputEmail1">Hoteles</label>
+	      <input type="text" ng-model="objCategoria.nombreKey" class="form-control" placeholder="Categoria 01">
 	    </div>
 	    <div class="form-group">
 	      <label for="exampleInputFile">Imagen de previsualización:</label>
-	      <input type="file" ng-model="objPlantilla.imgPrev" >
+	      <input type="file" ng-model="objCategoria.imgPrev" >
 	      <p class="help-block">Formatos aceptados: jpg, png</p>
-	    </div>
-	    <div class="form-group">
-	      <label for="exampleInputPassword1">Url dela plantilla:</label>
-	      <input type="text" ng-model="objPlantilla.webURL" class="form-control"  placeholder="Password">
-	    </div>	    
+	    </div> 
 	  </form>
 	  <center>
-		  <button type="" ng-click="agregarPlantilla(objPlantilla)" class="btn btn-default">Agregar</button>
-		  <button type="" ng-click="actualizarPlantilla(objPlantilla)" class="btn btn-default">Editar</button>
+		  <button type="" ng-click="agregarCategoria(objCategoria)" class="btn btn-default">Agregar</button>
+		  <button type="" ng-click="actualizarCategoria(objCategoria)" class="btn btn-default">Editar</button>
 		  <button type="" ng-click="cancelarForm()" class="btn btn-default">Cancelar</button>
 	  </center>
   </div>
