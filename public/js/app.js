@@ -15,16 +15,20 @@ var app = angular.module("app", [
 			templateUrl: 'templates/categorias.html',
 			controller:'categoriaCtrl'
 		})
-		.when('/categorias/:id', {
-			templateUrl: 'templates/admPlantillas/hoteles.html',
-			controller:'plantillaCtrl'
-		})
-		.when('/pageTest/:id', {
-			templateUrl: 'templates/admPlantillas/test.html',
-			controller:'plantillaCtrl'
-		})
-		.when('/cate/:key', {
-			templateUrl: 'templates/admPlantillas/hoteles.html',
+		.when('/formCategoria', {
+			templateUrl: 'templates/formCategoria.html',
+			controller: 'categoriaCtrl'
+		})	
+		.when('/formCategoria/:categoriaId', {
+			templateUrl: 'templates/formCategoria.html',
+			controller: 'categoriaCtrl'
+		})	
+		/*.when('/categorias/:id', {
+			templateUrl: 'templates/admPlantillas/plantilla.html',
+			controller:'categoriaCtrl'
+		})*/
+		.when('/plantilla/:categoriaClave', {
+			templateUrl: 'templates/admPlantillas/plantilla.html',
 			controller: 'plantillaCtrl'
 		})
 		.when('/formPlantilla', {
@@ -39,22 +43,7 @@ var app = angular.module("app", [
 			templateUrl: 'templates/formCategoria.html',
 			controller: 'categoriaCtrl'
 		})
-		.when('/restaurantes', {
-			templateUrl: 'templates/admPlantillas/restaurantes.html'
-		})
-		.when('/clubes', {
-			templateUrl: 'templates/admPlantillas/clubes.html'
-		})
-		.when('/tiendasxdep', {
-			templateUrl: 'templates/admPlantillas/tiendasxdep.html'
-		})
-		.when('/clinicas', {
-			templateUrl: 'templates/admPlantillas/clinicas.html'
-		})
-		.when('/autos', {
-			templateUrl: 'templates/admPlantillas/autos.html'
-		})
-		
+
 		.when('/misPlantillas', {
 			templateUrl: 'templates/admUsers/misplantillas.html'
 		})
