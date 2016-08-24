@@ -13,7 +13,7 @@ var app = angular.module("app", [
 		})
 		.when('/categorias', {
 			templateUrl: 'templates/categorias.html',
-			controller:'plantillaCtrl'
+			controller:'categoriaCtrl'
 		})
 		.when('/categorias/:id', {
 			templateUrl: 'templates/admPlantillas/hoteles.html',
@@ -37,7 +37,7 @@ var app = angular.module("app", [
 		})
 		.when('/formCategoria', {
 			templateUrl: 'templates/formCategoria.html',
-			controller: 'plantillaCtrl'
+			controller: 'categoriaCtrl'
 		})
 		.when('/restaurantes', {
 			templateUrl: 'templates/admPlantillas/restaurantes.html'

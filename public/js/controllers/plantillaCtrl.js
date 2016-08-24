@@ -6,10 +6,31 @@ app.controller("plantillaCtrl", function ($scope, $location, $routeParams, crudC
 	$scope.objCategoria={};	
 
 	var categoriaKey = $routeParams.key;
+	var objetoCategoriElegida;
+
 	if (categoriaKey) {
 		//objetoElegido=getDetalles(categoriaDetalleId);		
 		$scope.cateKey=categoriaKey;
 	};
+
+	//-------------------------------------------
+
+	var idCat = $routeParams.idCat;
+
+	if (idCat) {
+		objetoCategoriElegida=getDetallesCat(idCat);		
+		$scope.objCategoria=objetoCategoriElegida[0];
+	};
+
+	function getDetallesCat(idCat){
+		var detalles = [];
+		firebase.database().ref('categoria/' + idCat).on('value', function(snapshot) {
+		  detalles.push(snapshot.val());
+		});		
+		return detalles;		
+	};
+
+	//---------------------------------------------
 
 	var ref = firebase.database().ref("plantilla");
 	$scope.objHotel = $firebaseArray(ref);
@@ -36,6 +57,17 @@ app.controller("plantillaCtrl", function ($scope, $location, $routeParams, crudC
 		//var recentPostsRef = firebase.database().ref('categoria').limitToLast(1);
 		//console.log(recentPostsRef)
 	}
+
+	$scope.actualizarCategoria = function (c) {
+	  firebase.database().ref('categoria/' + idCat).set({
+	    nombre: c.nombre,
+	    descripcion: c.descripcion,
+	    nombreKey : c.nombreKey
+	  });
+		$location.path("/cate");		
+	};
+
+
 
 	$scope.agregarPlantilla = function (h) {
 		$scope.objHotel.$add($scope.objPlantilla)
