@@ -13,13 +13,21 @@ var app = angular.module("app", [
 		})
 		.when('/categorias', {
 			templateUrl: 'templates/categorias.html',
-			controller:'plantillaCtrl'
+			controller:'categoriaCtrl'
 		})
-		.when('/categorias/:id', {
+		.when('/formCategoria', {
+			templateUrl: 'templates/formCategoria.html',
+			controller: 'categoriaCtrl'
+		})	
+		.when('/formCategoria/:categoriaId', {
+			templateUrl: 'templates/formCategoria.html',
+			controller: 'categoriaCtrl'
+		})	
+		/*.when('/categorias/:id', {
 			templateUrl: 'templates/admPlantillas/plantilla.html',
-			controller:'plantillaCtrl'
-		})
-		.when('/plantilla/:key', {
+			controller:'categoriaCtrl'
+		})*/
+		.when('/plantilla/:categoriaClave', {
 			templateUrl: 'templates/admPlantillas/plantilla.html',
 			controller: 'plantillaCtrl'
 		})
@@ -30,15 +38,7 @@ var app = angular.module("app", [
 		.when('/formPlantilla/:id', {
 			templateUrl: 'templates/admPlantillas/formPlantilla.html',
 			controller: 'plantillaCtrl'
-		})
-		.when('/formCategoria', {
-			templateUrl: 'templates/formCategoria.html',
-			controller: 'plantillaCtrl'
-		})	
-		.when('/formCategoria/:idCat', {
-			templateUrl: 'templates/formCategoria.html',
-			controller: 'plantillaCtrl'
-		})			
+		})		
 		.when('/misPlantillas', {
 			templateUrl: 'templates/admUsers/misplantillas.html'
 		})
