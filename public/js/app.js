@@ -16,15 +16,11 @@ var app = angular.module("app", [
 			controller:'plantillaCtrl'
 		})
 		.when('/categorias/:id', {
-			templateUrl: 'templates/admPlantillas/hoteles.html',
+			templateUrl: 'templates/admPlantillas/plantilla.html',
 			controller:'plantillaCtrl'
 		})
-		.when('/pageTest/:id', {
-			templateUrl: 'templates/admPlantillas/test.html',
-			controller:'plantillaCtrl'
-		})
-		.when('/cate/:key', {
-			templateUrl: 'templates/admPlantillas/hoteles.html',
+		.when('/plantilla/:key', {
+			templateUrl: 'templates/admPlantillas/plantilla.html',
 			controller: 'plantillaCtrl'
 		})
 		.when('/formPlantilla', {
@@ -38,23 +34,11 @@ var app = angular.module("app", [
 		.when('/formCategoria', {
 			templateUrl: 'templates/formCategoria.html',
 			controller: 'plantillaCtrl'
-		})
-		.when('/restaurantes', {
-			templateUrl: 'templates/admPlantillas/restaurantes.html'
-		})
-		.when('/clubes', {
-			templateUrl: 'templates/admPlantillas/clubes.html'
-		})
-		.when('/tiendasxdep', {
-			templateUrl: 'templates/admPlantillas/tiendasxdep.html'
-		})
-		.when('/clinicas', {
-			templateUrl: 'templates/admPlantillas/clinicas.html'
-		})
-		.when('/autos', {
-			templateUrl: 'templates/admPlantillas/autos.html'
-		})
-		
+		})	
+		.when('/formCategoria/:idCat', {
+			templateUrl: 'templates/formCategoria.html',
+			controller: 'plantillaCtrl'
+		})			
 		.when('/misPlantillas', {
 			templateUrl: 'templates/admUsers/misplantillas.html'
 		})
